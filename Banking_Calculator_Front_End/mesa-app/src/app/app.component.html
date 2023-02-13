@@ -1,0 +1,28 @@
+<h1>Calculator</h1>
+<div class="calculator">
+  <div class="calculator__output">{{firstValue}}</div>
+  <div class="calculator__output">{{display}}</div>
+  <div class="calculator__keys">
+    <button class="calculator__key" (click)="singleOp('fraction')">1/x</button>
+    <button class="calculator__key" (click)="singleOp('squere')"><sub>X</sub>2</button>
+    <button class="calculator__key" (click)="singleOp('root')">∛</button>
+    <button class="calculator__key" (click)="singleOp('percent')">%</button>
+    <button class="calculator__key calculator__key--operator" (click)="oper('add')">+</button>
+    <button class="calculator__key calculator__key--operator" (click)="oper('minus')">-</button>
+    <button class="calculator__key calculator__key--operator" (click)="oper('multiply')">*</button>
+    <button class="calculator__key calculator__key--operator" (click)="oper('divide')">÷</button>
+    <button class="calculator__key" (click)="numClick(9)">9</button>
+    <button class="calculator__key" (click)="numClick(8)">8</button>
+    <button class="calculator__key" (click)="numClick(7)">7</button>
+    <button class="calculator__key" (click)="numClick(6)">6</button>
+    <button class="calculator__key" (click)="numClick(5)">5</button>
+    <button class="calculator__key" (click)="numClick(4)">4</button>
+    <button class="calculator__key" (click)="numClick(3)">3</button>
+    <button class="calculator__key" (click)="numClick(2)">2</button>
+    <button class="calculator__key" (click)="numClick(1)">1</button>
+    <button class="calculator__key" (click)="numClick(0)">0</button>
+    <button class="calculator__key" (click)="numClick('.')">.</button>
+    <button class="calculator__key" (click)="reset()">AC</button>
+    <button class="calculator__key calculator__key--enter" (click)="getValue()">=</button>
+  </div>
+</div>
