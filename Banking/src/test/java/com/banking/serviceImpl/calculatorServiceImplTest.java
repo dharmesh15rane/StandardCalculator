@@ -1,5 +1,6 @@
 package com.banking.serviceImpl;
 
+import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertTrue;
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -9,7 +10,7 @@ import org.mockito.junit.MockitoJUnitRunner;
 
 import com.banking.serviceimpl.CalculatorServiceImpl;
 
-//@RunWith(MockitoJUnitRunner.class)
+
 class calculatorServiceImplTest {
     
 	
@@ -22,6 +23,12 @@ class calculatorServiceImplTest {
 		assertTrue(cs.calculat(10, "minus", 2).equals("8.0"));
 		assertTrue(cs.calculat(10, "multiply", 2).equals("20.0"));
 		assertTrue(cs.calculat(10, "divide", 2).equals("5.0"));
+		
+		//Negative test cases
+		assertFalse(cs.calculat(10,"add", 2).equals("10.0"));
+		assertFalse(cs.calculat(10,"minus", 2).equals("10.0"));
+		assertFalse(cs.calculat(10,"multiply", 2).equals("10"));
+		
 		
 		
 	}
